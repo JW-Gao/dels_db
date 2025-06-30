@@ -1,6 +1,7 @@
 #pragma  once
 #include "def_types.h"
 
+
 // 
 const size_t MAX_MSG_HEADER_LEN = 32;
 
@@ -47,7 +48,7 @@ const size_t SEGMENT_CLEANUP_THRESHOLD = 50;
 
 // BLOB大小限制
 #if TARGET_64BIT
-    const size_t MAX_BLOB = 1UL << 37; // 128GB
+    const size_t MAX_BLOB = 1ULL << 37; // 128GB
 #elif TARGET_32BIT
     const size_t MAX_BLOB = 1UL << 29; // 512MB
 #endif
